@@ -43,7 +43,7 @@ const ChatBot = () => {
       const data = await response.json();
       const reply =
         data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "❌ No response from Gemini.";
+        "❌ No response from Chat Bot !";
 
       // Optional: Add formatting for emojis, bullets, headings
       const formattedReply = reply
@@ -77,10 +77,10 @@ const ChatBot = () => {
     <div
       style={{
         maxWidth: "600px",
-        margin: "20px auto",
+        margin: "0px auto",
         display: "flex",
         flexDirection: "column",
-        height: "90vh",
+        height: "97vh",
         borderRadius: "15px",
         boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
         overflow: "hidden",
@@ -89,15 +89,19 @@ const ChatBot = () => {
       {/* Header */}
       <div
         style={{
-          background: "#0078ff",
-          color: "white",
+          background: "#f5f5f5",
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/cubes.png')",
+
+          color: "gray",
           padding: "15px",
           textAlign: "center",
           fontWeight: "bold",
           fontSize: "18px",
         }}
       >
-        🤖 Vikash ChatBot
+        Vikash ChatBot
+        <hr />
       </div>
 
       {/* Chat Area */}
@@ -105,7 +109,7 @@ const ChatBot = () => {
         style={{
           flex: 1,
           background: "#f5f5f5",
-          padding: "15px",
+          // padding: "15px",
           display: "flex",
           flexDirection: "column",
           backgroundImage:
@@ -122,7 +126,8 @@ const ChatBot = () => {
               key={i}
               style={{
                 alignSelf: "flex-start",
-                background: "#e0e0e0",
+                // background: "#f8f7f7ff",
+                background: "transparent",
                 color: "black",
                 padding: "10px 15px",
                 borderRadius: "20px",
@@ -184,7 +189,9 @@ const ChatBot = () => {
         style={{
           display: "flex",
           padding: "10px",
-          background: "#fff",
+          background: "#f5f5f5",
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/cubes.png')",
           borderTop: "1px solid #ddd",
         }}
       >
@@ -192,7 +199,7 @@ const ChatBot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyPress}
-          placeholder="Type a message..."
+          placeholder="Ask anything"
           style={{
             flex: 1,
             padding: "12px 15px",

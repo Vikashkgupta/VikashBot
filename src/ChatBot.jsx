@@ -100,7 +100,7 @@ const ChatBot = () => {
           fontSize: "18px",
         }}
       >
-        Vikash ChatBot
+        Vikash Chat Bot
         <hr />
       </div>
 
@@ -144,7 +144,7 @@ const ChatBot = () => {
               key={i}
               style={{
                 alignSelf: "flex-end",
-                background: "#0078ff",
+                background: "#1E90FF",
                 color: "white",
                 padding: "10px 15px",
                 borderRadius: "20px",
@@ -216,7 +216,7 @@ const ChatBot = () => {
             marginLeft: "10px",
             padding: "12px 20px",
             borderRadius: "50px",
-            background: loading ? "#999" : "#0078ff",
+            background: loading ? "#999" : "#0052CC",
             color: "white",
             border: "none",
             cursor: loading ? "not-allowed" : "pointer",
